@@ -1,0 +1,34 @@
+https://www.luiztools.com.br/post/tutorial-crud-em-node-js-com-driver-nativo-do-mongodb/#2
+
+Criar estrutura basica do projeto
+express -e --git workshoptdc
+
+Depois entre na pasta e mande instalar as dependências com npm install:
+npm install
+
+- express
+npm install -g express-generator
+
+- estrutura básica de um projeto 
+express -e --git "pasta"
+
+- cd "pasta" , npm install
+
+- npm start
+
+( dependencia do mongo )
+- npm install -S mongodb 
+- npm install mongoose
+
+- Instalando o mongodb:
+c:\mongo\bin> mongod --dbpath c:\node\workshop\data\
+c:\mongo\bin> mongo
+	use workshoptdc
+	db.customers.insert({ "nome" : "Luiz", "idade" : 29 })
+	db.customers.find().pretty()
+	custArray = [{ "nome" : "Fernando", "idade" : 29 }, { "nome" : "Teste", "idade" : 20 }]
+	db.customers.insert(custArray);
+
+
+
+

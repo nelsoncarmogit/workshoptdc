@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <form action="<%= action %>" method="POST">
+    <p>Nome:<input type="text" name="nome" value="<%= doc.nome %>" required /></p>
+    <p>Idade:<input type="number" name="idade" value="<%= doc.idade %>" required /></p>
+    <input type="submit" value="Salvar" />
+    <input type="button" value="Voltar" onClick="history.go(-1)" />
+    <button onclick="excluir('/delete/', '<%= doc._id %>')">Excluir</button>
+  </form>
+</body>
+</html>
+
+<script>
+    function excluir(form, id) {
+
+      alert(form + id);
+      alert(form + id);
+      document.form.action = form + id;
+    }
+  </script>
