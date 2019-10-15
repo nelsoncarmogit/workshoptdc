@@ -11,9 +11,10 @@
   <form action="<%= action %>" method="POST">
     <p>Nome:<input type="text" name="nome" value="<%= doc.nome %>" required /></p>
     <p>Idade:<input type="number" name="idade" value="<%= doc.idade %>" required /></p>
-    <input type="submit" value="Salvar" />
+    <input type="submit" value="Gravar" />
     <input type="button" value="Voltar" onClick="history.go(-1)" />
-    <button onclick="excluir('/delete/', '<%= doc._id %>')">Excluir</button>
+    <a href="/delete/<%= doc._id %>" onclick="return confirm('Tem certeza que deseja excluir?')"><img src="admin/imagens/botao_retornar.gif" border="0" /></a>
+    
   </form>
 </body>
 </html>
@@ -23,5 +24,6 @@
 
       alert(form + id);
       document.form.action = form + id;
+      document.form.redirect;
     }
   </script>
