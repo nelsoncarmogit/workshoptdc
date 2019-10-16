@@ -1,3 +1,4 @@
+// Banco
 var mongoClient = require("mongodb").MongoClient;
 mongoClient.connect("mongodb+srv://nelson:nelson@cluster0-c3mwl.mongodb.net/test?retryWrites=true&w=majority")
             .then(conn => global.conn = conn.db("workshoptdc"))
